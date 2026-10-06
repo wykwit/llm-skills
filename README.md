@@ -1,0 +1,39 @@
+# llm-skills
+
+LLM [Agent Skills](https://agentskills.io) consumed by multiple LLM harnesses: **omp**, **opencode**, **openclaw**, **hermes**, etc.
+
+## Install
+
+```sh
+make install    # or: ./tools/install.sh
+```
+
+Idempotent; re-run after every `git pull`. It:
+
+1. lints every skill (aborts on problems),
+2. symlinks `skills/<name>` into the shared hub `~/.agents/skills`, pruning links for removed skills,
+3. wires harnesses that don't read the hub natively (hermes: adds the hub to `skills.external_dirs` in `~/.hermes/config.yaml`).
+
+omp, opencode and openclaw read `~/.agents/skills` on their own.
+
+Override the hub with `SKILLS_HUB=/path ./tools/install.sh`.
+
+Other targets: `make uninstall`, `make lint`, `make link` (link + prune without full install).
+
+## The skills
+
+| Skill | Use when |
+|---|---|
+| `agent-implement` | Acting as the implementation subagent; executing a plan step by step |
+| `agent-review` | Acting as the independent reviewer/QA subagent |
+| `imperative-commits` | Committing changes, splitting work into commits, writing commit messages |
+| `pr-comments` | Triaging review comments on a GitHub PR / GitLab MR |
+| `pr-ship` | Finishing a branch: verify green, tidy history, push, open PR |
+| `pr-summary` | Writing a PR summary/description for the current branch |
+| `quick-code-review` | Fast read-only review of uncommitted working-tree changes |
+| `quick-fix` | Fixing issues identified earlier in the conversation (user-invoked only) |
+| `visual-code-review` | Rendering a PR/branch review as a step-by-step HTML walkthrough |
+
+## License
+
+[MIT](LICENSE)
