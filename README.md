@@ -34,6 +34,20 @@ Other targets: `make uninstall`, `make lint`, `make link` (link + prune without 
 | `quick-fix` | Fixing issues identified earlier in the conversation (user-invoked only) |
 | `visual-code-review` | Rendering a PR/branch review as a step-by-step HTML walkthrough |
 
+## External skills
+
+Some external skills that I highly recommend:
+
+- [pbakaus/impeccable](https://github.com/pbakaus/impeccable)
+- [mattpocock/skills](https://github.com/mattpocock/skills)
+- [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills)
+- [life-alignment-agent](https://clawhub.ai/lakendocean/skills/life-alignment-agent)
+
+And some others that seem interesting:
+
+- [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd)
+- [blader/humanizer](https://github.com/blader/humanizer)
+
 ## License
 
 [MIT](LICENSE)
