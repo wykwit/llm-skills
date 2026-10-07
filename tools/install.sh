@@ -10,11 +10,11 @@
 # Override the hub with SKILLS_HUB=/path ./install.sh
 set -euo pipefail
 
-repo="$(cd "$(dirname "$0")" && pwd)"
+repo="$(cd "$(dirname "$0")/../" && pwd)"
 hub="${SKILLS_HUB:-$HOME/.agents/skills}"
 
 echo "== lint"
-"$repo/tools/lint.sh"
+"$repo/tools/lint.py"
 
 echo "== link into $hub"
 SKILLS_HUB="$hub" "$repo/tools/link.sh" --prune
