@@ -19,7 +19,7 @@ from pathlib import Path
 try:
     import yaml
 except ImportError:
-    sys.exit("lint.sh needs PyYAML (python3-yaml / pip install pyyaml)")
+    sys.exit("lint.py needs PyYAML (python3-yaml / pip install pyyaml)")
 
 SPEC_KEYS = {"name", "description", "license", "compatibility", "metadata", "allowed-tools",
              "disable-model-invocation"}
