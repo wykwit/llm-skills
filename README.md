@@ -28,6 +28,7 @@ Other targets: `make uninstall`, `make lint`, `make link` (link + prune without 
 | `agent-review` | Acting as the independent reviewer/QA subagent |
 | `imperative-commits` | Committing changes, splitting work into commits, writing commit messages |
 | `pr-comments` | Triaging review comments on a GitHub PR / GitLab MR |
+| `pr-babysit` | Watching one PR/MR in the background until merge (hermes, openclaw, local timer, remote host) |
 | `pr-ship` | Finishing a branch: verify green, tidy history, push, open PR |
 | `pr-summary` | Writing a PR summary/description for the current branch |
 | `quick-code-review` | Fast read-only review of uncommitted working-tree changes |
